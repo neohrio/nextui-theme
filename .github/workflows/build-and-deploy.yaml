@@ -1,0 +1,37 @@
+name: Build and Deploy Storybook
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:      
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Check out this repository
+        uses: actions/checkout@v3
+
+      - name: Clone NextUI repository
+        run: git clone --depth=1 https://github.com/nextui-org/nextui.git nextui
+
+      - name: Copy custom Tailwind config
+        run: cp custom-tailwind.config.js nextui/packages/storybook/tailwind.config.js && cp theme.json nextui/packages/storybook/theme.json
+
+      - name: Install dependencies
+        working-directory: ./nextui
+        run: pnpm i --hoist
+
+      - name: Build Storybook
+        working-directory: ./nextui
+        run: pnpm build:sb
+
+      - name: Deploy Storybook to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./nextui/packages/storybook/storybook-static
