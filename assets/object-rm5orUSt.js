@@ -1,0 +1,1 @@
+import{i as n}from"./assertion-BI5aukJI.js";const c=(e,t)=>n(e)?e instanceof Array?[...e]:e[t]:e;function s(e){const t=Object.assign({},e);for(let r in t)t[r]===void 0&&delete t[r];return t}export{s as c,c as g};

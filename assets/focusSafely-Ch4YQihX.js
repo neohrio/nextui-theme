@@ -1,0 +1,1 @@
+import{$ as o,a as t}from"./useFocusWithin-Dv5DP61h.js";import{a as c}from"./openLink-BoTcy9x3.js";import{a as $}from"./usePress-BDQnv3aP.js";function i(e){const a=o(e);if(t()==="virtual"){let f=a.activeElement;$(()=>{a.activeElement===f&&e.isConnected&&c(e)})}else c(e)}export{i as $};

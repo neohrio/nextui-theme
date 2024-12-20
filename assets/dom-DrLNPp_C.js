@@ -1,0 +1,1 @@
+import{r as u}from"./index-Dy2Ak0OH.js";function s(n){return{UNSAFE_getDOMNode(){return n.current}}}function a(n){const e=u.useRef(null);return u.useImperativeHandle(n,()=>e.current),e}function i(n,e){return n&&e&&n.x<e.x+e.width&&n.x+n.width>e.x&&n.y<e.y+e.height&&n.y+n.height>e.y}export{i as a,s as c,a as u};

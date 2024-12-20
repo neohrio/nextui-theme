@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime-CS_Wz6c_.js";import{r as m}from"./index-Dy2Ak0OH.js";import{F as s}from"./base-form-BElK45Vm.js";import{u as e}from"./provider-context-DmA892L5.js";const p=m.forwardRef(function(o,a){const r=e(),i=o.validationBehavior??(r==null?void 0:r.validationBehavior)??"aria";return t.jsx(s,{...o,ref:a,validationBehavior:i})});export{p as F};

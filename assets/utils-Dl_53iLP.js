@@ -1,0 +1,1 @@
+import{r as c}from"./index-Dy2Ak0OH.js";function o(e){return c.forwardRef(e)}const m=(e,t,i=!0)=>{if(!t)return[e,{}];const f=t.reduce((n,r)=>r in e?{...n,[r]:e[r]}:n,{});return i?[Object.keys(e).filter(r=>!t.includes(r)).reduce((r,u)=>({...r,[u]:e[u]}),{}),f]:[e,f]};export{o as f,m};

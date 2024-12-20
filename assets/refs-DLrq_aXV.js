@@ -1,0 +1,1 @@
+import{a as o}from"./assertion-BI5aukJI.js";function i(r,n){if(r!=null){if(o(r)){r(n);return}try{r.current=n}catch{throw new Error(`Cannot assign value '${n}' to ref '${r}'`)}}}function a(...r){return n=>{r.forEach(t=>i(t,n))}}export{a as m};
